@@ -6,7 +6,7 @@ from .. import log
 try:
     from neopixel import Adafruit_NeoPixel, Color as NeoColor
 except:
-    log.error('Please install rpi_ws281x: https://github.com/jgarff/rpi_ws281x/tree/master/python')
+    log.error('Please install rpi_ws281x: https://github.com/ManiacalLabs/BiblioPixel/wiki/DriverPiWS281X')
     raise
 
 
@@ -48,7 +48,7 @@ class DriverPiWS281X(DriverBase):
 
 MANIFEST = [
     {
-        "id": "WS2801",
+        "id": "PiWS281X",
         "class": DriverPiWS281X,
         "type": "driver",
         "display": "WS281X",
