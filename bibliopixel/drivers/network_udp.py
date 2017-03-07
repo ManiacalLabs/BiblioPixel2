@@ -25,7 +25,7 @@ class RETURN_CODES:
 class DriverNetworkUDP(DriverBase):
     """Driver for communicating with another device on the network."""
 
-    def __init__(self, num=0, width=0, height=0, host="localhost", broadcast=False, port=3142, broadcast_interface=''):
+    def __init__(self, num=0, width=0, height=0, host="localhost", broadcast=False, port=1822, broadcast_interface=''):
         super(DriverNetworkUDP, self).__init__(num, width, height)
 
         self._host = host
@@ -81,3 +81,48 @@ class DriverNetworkUDP(DriverBase):
             error = "Problem communicating with network receiver!"
             log.error(error)
             raise IOError(error)
+
+
+MANIFEST = [
+    {
+        "id": "network_udp",
+        "class": DriverNetworkUDP,
+        "type": "driver",
+        "display": "Network UDP",
+        "desc": "Sends pixel data over the network to a reciever.",
+        "params": [{
+                "id": "num",
+                "label": "# Pixels",
+                "type": "int",
+                "default": 0,
+                "min": 0,
+                "help": "Total pixels in display. May use Width AND Height instead."
+        }, {
+            "id": "width",
+            "label": "Width",
+            "type": "int",
+            "default": 0,
+            "min": 0,
+            "help": "Width of display. Set if using a matrix."
+        }, {
+            "id": "height",
+            "label": "Height",
+            "type": "int",
+            "default": 0,
+            "min": 0,
+            "help": "Height of display. Set if using a matrix."
+        }, {
+            "id": "host",
+            "label": "Host IP",
+            "type": "str",
+            "default": "localhost",
+            "help": "Receiver host to connect to."
+        }, {
+            "id": "port",
+            "label": "Port",
+            "type": "int",
+            "default": 1822,
+            "help": "Port to connect to."
+        }]
+    }
+]

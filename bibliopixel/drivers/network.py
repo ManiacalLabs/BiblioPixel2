@@ -119,7 +119,7 @@ MANIFEST = [
             "help": "Height of display. Set if using a matrix."
         }, {
             "id": "host",
-            "label": "Pixel Size",
+            "label": "Host IP",
             "type": "str",
             "default": "localhost",
             "help": "Receiver host to connect to."
