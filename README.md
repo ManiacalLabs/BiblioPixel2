@@ -1,4 +1,6 @@
-#### For usage details, check the [Wiki](https://github.com/ManiacalLabs/BiblioPixel/wiki)!
+## This repository is a backup of the older BiblioPixel v2 for users that still require Python 2. We highly recommend using Python 3 and [BiblioPixel v3](https://github.com/ManiacalLabs/BiblioPixel) instead.
+
+#### For BiblioPixel v2 usage details, check the [v2 Wiki](https://github.com/ManiacalLabs/BiblioPixel2/wiki)!
 #### If you still need support, please post on the [Forum](http://forum.maniacallabs.com)
 
 For easy hardware interfacing, check out the BiblioPixel supported [AllPixel](http://maniacallabs.com/AllPixel).
